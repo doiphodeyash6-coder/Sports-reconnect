@@ -7,7 +7,7 @@ const Navbar = () => {
         </div>
         <div>
           <p className="text-sm text-brand-100/80">Dynamic Certificates</p>
-          <p className="text-lg font-semibold">Generator Studio</p>
+          <p className="text-lg font-semibold">Generator</p>
         </div>
       </div>
       <div className="flex items-center gap-4">

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Chrome, Github } from 'lucide-react';
 
 const AuthPage = () => {
   const [mode, setMode] = useState<'login' | 'signup'>('login');
@@ -75,12 +76,24 @@ const AuthPage = () => {
             </button>
           </form>
 
-          <div className="mt-6 flex items-center justify-between text-sm text-brand-100/70">
-            <span>{mode === 'login' ? 'Use SSO? Coming soon.' : 'You can add teammates later.'}</span>
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">
-              <span className="h-2 w-2 rounded-full bg-brand-500 animate-pulse" />
-              Secure workspace
-            </span>
+          <div className="mt-8 border-t border-white/10 pt-6">
+            <p className="mb-4 text-center text-sm text-brand-100/70">Or continue with</p>
+            <div className="grid grid-cols-2 gap-3">
+              <button
+                type="button"
+                className="flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-brand-100 transition hover:border-brand-500/60 hover:bg-white/10 hover:text-white"
+              >
+                <Chrome className="h-4 w-4" />
+                Google
+              </button>
+              <button
+                type="button"
+                className="flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-brand-100 transition hover:border-brand-500/60 hover:bg-white/10 hover:text-white"
+              >
+                <Github className="h-4 w-4" />
+                GitHub
+              </button>
+            </div>
           </div>
         </div>
       </div>

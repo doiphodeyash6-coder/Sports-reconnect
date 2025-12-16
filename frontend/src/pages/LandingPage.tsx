@@ -35,10 +35,6 @@ const LandingPage = () => {
                 <p>Premium templates</p>
               </div>
               <div>
-                <p className="text-lg font-semibold text-white">Live</p>
-                <p>Real-time preview</p>
-              </div>
-              <div>
                 <p className="text-lg font-semibold text-white">Export</p>
                 <p>PDF & PNG ready</p>
               </div>
@@ -49,19 +45,14 @@ const LandingPage = () => {
             <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/20 p-6 shadow-2xl shadow-brand-900/30">
               <div className="mb-4 flex items-center justify-between text-sm text-brand-100/80">
                 <span>Live Preview</span>
-                <span className="inline-flex items-center gap-2 rounded-full border border-white/10 px-3 py-1 text-xs">
-                  <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-                  Syncing
-                </span>
+                
               </div>
-              <div className="rounded-xl bg-gradient-to-br from-brand-500/20 via-brand-700/20 to-brand-900/25 p-6 text-white shadow-inner">
-                <p className="text-sm text-brand-100/80">Certificate of Achievement</p>
-                <h3 className="mt-2 text-2xl font-bold">Alex Morgan</h3>
-                <p className="mt-1 text-brand-100">For completing the Dynamic Certificates program.</p>
-                <div className="mt-6 flex items-center justify-between text-xs text-brand-100/80">
-                  <span>Issued: Today</span>
-                  <span>Signature • Verified</span>
-                </div>
+              <div className="rounded-xl overflow-hidden bg-black/20 shadow-inner">
+                <img 
+                  src="/Black and Gold Modern Elegant Certificate of Achievement .png" 
+                  alt="Certificate Preview"
+                  className="w-full h-auto object-cover"
+                />
               </div>
             </div>
           </div>
