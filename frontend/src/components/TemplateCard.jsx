@@ -1,4 +1,12 @@
+import { useNavigate } from 'react-router-dom';
+
 const TemplateCard = ({ template }) => {
+  const navigate = useNavigate();
+
+  const handleUseTemplate = () => {
+    navigate('/data');
+  };
+
   return (
     <div className="group relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 backdrop-blur-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-glow">
       <div className="aspect-[4/3] overflow-hidden">
@@ -17,7 +25,10 @@ const TemplateCard = ({ template }) => {
             {template.category}
           </span>
         </div>
-        <button className="w-full rounded-xl bg-gradient-to-r from-brand-500 via-brand-700 to-brand-900 px-4 py-3 text-sm font-semibold shadow-glow transition duration-300 hover:brightness-110">
+        <button
+          onClick={handleUseTemplate}
+          className="w-full rounded-xl bg-gradient-to-r from-brand-500 via-brand-700 to-brand-900 px-4 py-3 text-sm font-semibold shadow-glow transition duration-300 hover:brightness-110"
+        >
           Use Template
         </button>
       </div>
