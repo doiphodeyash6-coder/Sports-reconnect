@@ -26,14 +26,11 @@ app.get('/health', (_req, res) => {
 });
 
 app.use('/api/certificates', certificatesRouter);
-
-// Serve static HTML templates for debugging if needed
 app.use('/templates', express.static(path.join(__dirname, '..', 'templates')));
 
 const PORT = process.env.PORT || 4000;
 
 app.listen(PORT, () => {
-  // eslint-disable-next-line no-console
   console.log(`Backend server listening on port ${PORT}`);
 });
 

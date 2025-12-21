@@ -21,7 +21,6 @@ router.post('/generate-bulk', async (req, res) => {
 
     const archive = archiver('zip', { zlib: { level: 9 } });
     archive.on('error', (err) => {
-      // eslint-disable-next-line no-console
       console.error('Archiver error:', err);
       if (!res.headersSent) {
         res.status(500).json({ error: 'Failed to create ZIP archive' });
@@ -40,7 +39,6 @@ router.post('/generate-bulk', async (req, res) => {
 
     archive.finalize();
   } catch (error) {
-    // eslint-disable-next-line no-console
     console.error('Bulk certificate generation error:', error);
     if (!res.headersSent) {
       res.status(500).json({ error: 'Failed to generate certificates' });

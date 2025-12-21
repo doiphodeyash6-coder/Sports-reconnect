@@ -78,7 +78,6 @@ export async function generateCertificatesZipStream({ templateId, records, archi
       const namePart = sanitizeFileName(placeholders.NAME, `recipient_${index + 1}`);
       const fileName = `${String(index + 1).padStart(3, '0')}_${namePart}.pdf`;
 
-      // Ensure we always pass a Node Buffer into archiver
       const pdfBuffer =
         pdfRaw instanceof Buffer
           ? pdfRaw
